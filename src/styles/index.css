@@ -10,7 +10,14 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    list-style: none;
   }
+  body {
+    overflow-x: hidden;
+  }
+  /* html {
+    font-size: 62.5%;
+  } */
   @layer components {
     .max-container {
       max-width: 1440px;

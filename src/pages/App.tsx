@@ -1,10 +1,10 @@
 import {
   Routes,
   Route,
-  // useLocation,
 } from 'react-router-dom';
 import {routesMapping} from '../configs/routes';
 import {ToastContainer} from 'react-toastify';
+import {MainLayout} from '../constants';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
@@ -17,21 +17,22 @@ const App = () => {
           marginTop: '80px',
           textAlign: 'center',
           width: '210px',
-          fontFamily: 'IRANSans',
           zIndex: '99999',
         }}
       />
-      <main className="relative p-4">
-        <Routes>
-          {routes.map((item) => (
-            <Route
-              key={item.route}
-              path={item.route}
-              element={<item.element />}
-            />
-          ))}
-        </Routes>
-      </main>
+      <MainLayout>
+        <main className="relative p-4">
+          <Routes>
+            {routes.map((item) => (
+              <Route
+                key={item.route}
+                path={item.route}
+                element={<item.element />}
+              />
+            ))}
+          </Routes>
+        </main>
+      </MainLayout>
     </>
   );
 };
