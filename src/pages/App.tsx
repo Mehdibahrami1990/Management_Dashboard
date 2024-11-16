@@ -16,7 +16,7 @@ const App = () => {
         style={{
           marginTop: '80px',
           textAlign: 'center',
-          width: '210px',
+          width: 'auto',
           zIndex: '99999',
         }}
       />
